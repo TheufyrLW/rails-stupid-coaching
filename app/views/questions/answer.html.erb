@@ -1,0 +1,28 @@
+<div class="container pt-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-4">
+      <h1 class="text-center mb-5">Stupid Coaching</h1>
+
+      <!-- User's question -->
+      <blockquote class="border-start border-5 ps-3 mb-5">
+        <p><%= @question %></p>
+        <footer class="blockquote-footer">
+          <cite>You</cite>
+        </footer>
+      </blockquote>
+
+      <!-- Coach's answer -->
+      <blockquote class="border-start border-5 ps-3 py-2 bg-warning-subtle mb-5">
+        <% unless @motivation.empty? %>
+        <p><%= @motivation %></p>
+        <% end %>
+        <p><%= @answer %></p>
+        <footer class="blockquote-footer">
+          <cite>Your coach</cite>
+        </footer>
+      </blockquote>
+
+      <%= link_to 'Ask a new question', 'ask' %>
+    </div>
+  </div>
+</div>
